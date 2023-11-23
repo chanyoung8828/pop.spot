@@ -1,9 +1,10 @@
 const { Schema, SchemaTypes } = require("mongoose");
 
-const waitingSchema = new Schema(
+const waitingSchema = new Schema([
   {
     date: Date,
     people: Number,
+    // waiting_queue: Array,
     popup_store: {
       type: SchemaTypes.ObjectId,
       ref: "PopupStore",
@@ -12,12 +13,12 @@ const waitingSchema = new Schema(
       type: SchemaTypes.ObjectId,
       ref: "User",
     },
+
     complete_waiting: {
       type: Boolean,
       default: false,
     },
   },
-  { timestamps: true }
-);
+]);
 
 module.exports = waitingSchema;

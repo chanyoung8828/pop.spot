@@ -26,7 +26,7 @@ class WaitingService {
   // 전체 대기 목록 조회
   async getWaiting() {
     const getWaitingList = await Waiting.find();
-    console.log("Get Waiting Data By Id");
+    console.log("Get All Waiting");
     return getWaitingList;
   }
 
@@ -45,7 +45,7 @@ class WaitingService {
   // 현장 대기 번호 조회
   // [...] length
   async waitingNumber() {
-    // const waitingNumber = .length;
+    const waitingNumber = Waiting.length;
     console.log("WaitingNumber Data OK");
     return waitingNumber;
   }
@@ -66,7 +66,7 @@ class WaitingService {
     return "WaitingTime Data OK";
   }
 
-  async completeWaiting(complete_waiting) {
+  async completeWaiting() {
     const completeWaiting = Waiting.updateOne({ complete_waiting: true });
     console.log("Complete Waiting success");
     completeCounter++;

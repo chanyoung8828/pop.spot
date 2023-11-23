@@ -12,7 +12,7 @@ const {
 const router = Router();
 
 router.post("/createWaiting", createWaiting);
-router.get("/getWaitingList", getWaiting);
+router.get("/", getWaiting);
 router.get("/getWaitingByPopupStore/:popupStore", getWaitingByPopupStore);
 router.get("/waitingNumber", waitingNumber);
 router.get("/checkWaitingTeam", checkWaitingTeam);
