@@ -6,16 +6,7 @@ import WaitingCard from "./components/waitingCard";
 // import CancelModal from "../cancleWaitingModal/cancleWaitingModal";
 
 export default function Waiting() {
-  // 1. useState 작성
-  const [myWaitingData, setMyWaitingData] = useState({ message: "", data: [] });
-
-  const openCancelModal = () => {
-    setCancelModal(true);
-  };
-
-  const closeCancelModal = () => {
-    setCancelModal(false);
-  };
+  const [myWaitingData, setMyWaitingData] = useState(undefined);
 
   // 2. useEffect 작성 (계속 업데이트 되야 하는 부분)
   useEffect(() => {
@@ -24,15 +15,15 @@ export default function Waiting() {
         const response = await instance.get(`/waiting/getWaitingStatus`);
 
         const waitingData = response.data.data ? response.data.data : undefined;
+        console.log("waitingData : ", waitingData);
 
         // 현장 대기 상태 업데이트
-        setMyWaitingData({ message: response.data.message, data: waitingData });
+        await setMyWaitingData(waitingData);
 
         // 데이터 조회가 정상 동작하는지 test
-        console.log(myWaitingData.message);
-        console.log(myWaitingData); // [["VANS & BOLT 팝업스토어 : VANS MEETS BOLT", 0]];
-        console.log("data[0]: ", waitingData.data[0][0]);
-        console.log("data[1]: ", waitingData.data[0][1]);
+        console.log("myWaitingData1 : ", waitingData); // [['하겐다즈 X 아우프글렛 팝업스토어', 2]];
+        console.log("data[0]: ", waitingData[0][0]); // 하겐다즈 X 아우프글렛 팝업스토어
+        console.log("data[1]: ", waitingData[0][1]); // 2
         // console.log("waitingData.data.length: ", waitingData.data.length);
       } catch (error) {
         console.error(
@@ -47,12 +38,14 @@ export default function Waiting() {
     axiosWaitingStatus();
   }, []);
 
+  // <li key={index}>{item.name}</li>
   return (
     <div className="myWaitingContainer">
       <div className="waitingTitle">나의 현장 대기</div>
       <div className="waitingCardWrapper">
-        {myWaitingData.data
-          ? myWaitingData.data.map((v) => WaitingCard(v))
+        {/* {myWaitingData ? myWaitingData.map((v) => WaitingCard(v)) : ""} */}
+        {myWaitingData
+          ? myWaitingData.map((item, index) => WaitingCard(item, index))
           : ""}
       </div>
     </div>

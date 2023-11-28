@@ -1,52 +1,111 @@
-.waitingContainer {
-  background-color: white;
-  border: none;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .popUpStoreName {
-    background-color: #f9f7f7;
-    padding: 30px 10px;
+@media (min-width: 768px) {
+  .waitingContainer {
+    background-color: white;
+    border: 1.2px solid black;
     border-radius: 15px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .waitingTimeContainer {
-    background-color: #f9f7f7;
-    padding: 20px 10px;
-    border-radius: 15px;
+    margin-top: 50px;
     display: flex;
-  }
+    flex-direction: column;
+    align-items: center;
 
-  .waitingTeamText {
-    font-size: 25px;
-    margin: 10px 10px 30px 10px;
-  }
+    .popUpStoreName {
+      background-color: #f9f7f7;
+      padding: 30px 10px;
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-  .waitingTimeText {
-    font-size: 30px;
-    margin: 10px 10px 30px 10px;
-  }
+    .waitingTimeContainer {
+      background-color: #f9f7f7;
+      padding: 20px 10px;
+      border-radius: 15px;
+      display: flex;
+    }
 
-  .waitingInfoWrapper {
-    width: 300px;
-    text-align: center;
-    margin: 10px;
-  }
+    .waitingTeamText {
+      font-size: 25px;
+      margin: 10px 10px 30px 10px;
+    }
 
-  .waitingInfoButton {
-    background-color: #f9f7f7;
-    margin: 20px 30px;
-    border-radius: 3px;
-  }
+    .waitingTimeText {
+      font-size: 30px;
+      margin: 10px 10px 30px 10px;
+    }
 
-  .waitingButtonText {
-    font-size: 15px;
-    padding: 10px;
-    text-align: center;
+    .waitingInfoWrapper {
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .waitingInfoButton {
+      background-color: #f9f7f7;
+      margin: 20px 30px;
+      border-radius: 3px;
+    }
+
+    .waitingButtonText {
+      font-size: 15px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .waitingContainer {
+    background-color: white;
+    border: 1.2px solid black;
+    border-radius: 15px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .popUpStoreName {
+      background-color: #f9f7f7;
+      padding: 30px 10px;
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .waitingTimeContainer {
+      background-color: #f9f7f7;
+      padding: 20px 10px;
+      border-radius: 15px;
+      display: flex;
+    }
+
+    .waitingTeamText {
+      font-size: 25px;
+      margin: 10px 10px 30px 10px;
+    }
+
+    .waitingTimeText {
+      font-size: 30px;
+      margin: 10px 10px 30px 10px;
+    }
+
+    .waitingInfoWrapper {
+      width: 300px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .waitingInfoButton {
+      background-color: #f9f7f7;
+      margin: 20px 30px;
+      border-radius: 3px;
+    }
+
+    .waitingButtonText {
+      font-size: 15px;
+      padding: 10px;
+      text-align: center;
+    }
   }
 }

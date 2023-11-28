@@ -1,4 +1,6 @@
 const WaitingService = require("../services/waitingService");
+const { PopupStore, Waiting } = require("../models");
+
 const {
   NotFoundError,
   BadRequestError,
@@ -28,6 +30,25 @@ const createWaiting = async (req, res, next) => {
       .json({ message: "현장대기 예약 완료입니다.", data: beforeMe });
   } catch (error) {
     next(error);
+  }
+};
+
+// PopupStore에서 popupStore 이름으로 ObjectId 찾기
+// Waiting에서 ObjectId로 userId 찾기
+const getPopupStoreId = async (req, res, next) => {
+  try {
+    const { name } = req.query;
+    const popupStore = await PopupStore.findOne({ name });
+
+    if (!popupStore) {
+      return res
+        .status(404)
+        .json({ error: "해당 팝업스토어 Id가 존재하지 않습니다." });
+    }
+
+    res.json(popupStore);
+  } catch (error) {
+    res.status(500).json({ error: "팝업스토어 Id 검색 실패" });
   }
 };
 
@@ -77,10 +98,9 @@ const updateWaitingPeople = async (req, res, next) => {
 // 현장 대기 인원 삭제
 const deleteWaitingPeople = async (req, res, next) => {
   try {
-    const { userId, popupStoreId } = req.body;
+    const { popupStoreId } = req.query;
     const waitingService = new WaitingService();
     const deleteWaitingPeople = await waitingService.deleteWaitingPeople(
-      userId,
       popupStoreId
     );
 
@@ -140,6 +160,7 @@ const enterWaitingList = async (req, res, next) => {
 
 module.exports = {
   createWaiting,
+  getPopupStoreId,
   getWaitingStatus,
   updateWaitingPeople,
   deleteWaitingPeople,

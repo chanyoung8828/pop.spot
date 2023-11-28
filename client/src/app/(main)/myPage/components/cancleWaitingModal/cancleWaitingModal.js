@@ -3,20 +3,6 @@ import "./cancleWaitingModal.scss";
 import instance from "@/utils/instance";
 
 export default function CancleWaitingModal({ isOpen, onClose }) {
-  const axiosCancelWaiting = async () => {
-    try {
-      await instance.delete("/waiting/cancelWaiting");
-      console.log("현장 대기 취소 완료");
-    } catch (error) {
-      console.error("현장 대기 취소 실패:", error);
-    }
-  };
-
-  const isCancel = async () => {
-    await axiosCancelWaiting();
-    onClose();
-  };
-
   return (
     <div
       className="updateCancelContainer"
