@@ -161,11 +161,7 @@ export default function KakaoAuth() {
                   onChange={(e) => {
                     const newValue = e.target.value;
                     if (!isNaN(newValue)) {
-                      // handleInputChange(e);
-                      setFormData({
-                        ...formData,
-                        [phoneNumber]: e.target.value,
-                      });
+                      handleInputChange(e);
                     }
                   }}
                   placeholder="- 없이 숫자만 입력"
