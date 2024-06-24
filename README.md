@@ -31,4 +31,37 @@
 <br>
 
 ## 담당 페이지 구현 및 기능
-### 업체 관리자 페이지
+### 업체 관리자 페이지 개발
+- 헤더
+- 사이드바
+- 웨이팅, 사전예약 전체 리스트 조회
+- 웨이팅, 사전예약 현황 조회
+- 정렬(이름, 날짜, 총인원)
+- 업체관리자 전용 페이지의 접근 권한 검증 기능
+- 반응형
+  
+<br>
+
+## 페이지별 기능
+### 1. 전체 목록 페이지(메인 페이지)
+- 로그인 시 업체 관리자만 특정 페이지에 접근할 수 있도록 기능 권한을 설정하였습니다.
+- 로그인 시 관리자는 팝업스토어 이름과 브랜드명별로 목록을 조회할 수 있습니다.
+- 필터 기능을 통해 웨이팅 리스트와 사전예약 리스트를 구분하여 확인할 수 있습니다.
+
+
+<img src="https://blog.kakaocdn.net/dn/cMfpXy/btsH8VpNWN4/je7iPj8Ciu8UF0dklroIC0/img.png" width="400"> <img src="https://blog.kakaocdn.net/dn/bMZBAd/btsH9XUq1SF/gq76ZknGuvHfdW2zfEKi2K/img.png" width="400">
+
+
+<br>
+
+### 2. 웨이팅,사전예약 페이지
+- 이름, 날짜, 총인원별로 현황 리스트를 정렬하여 확인할 수 있습니다.
+- 웨이팅과 사전예약 사용자의 실시간 현황을 모니터링할 수 있습니다.
+- 사용자가 현장에 도착하면 관리자가 완료 버튼을 누르면 완료 상태로 변경되어 완료 페이지에 자동으로 정리됩니다.
+
+  
+<img src="https://blog.kakaocdn.net/dn/RdoD6/btsH9tsBE4B/jCqQaxtm0kzekDGpdDcUtK/img.png" width="400"> <img src="https://blog.kakaocdn.net/dn/oHusH/btsH97o3bGX/7TS9ZdVwGlbrNBbTMnbTik/img.png" width="400">
+
+### 3. 반응형
+
+
