@@ -21,10 +21,10 @@
 ## 사용 기술
 
 - **FrontEnd**
-  : Next.js / React / SCSS / Prettier / Eslint / AWS s3
+  : Next.js / React / SCSS / Prettier / Eslint <br>
 
 - **BackEnd** :
-  Node.js / express.js / MongoDB / Mongoose / Amazon S3 / PM2 / Nginx <br>
+  Node.js / express.js / MongoDB / Mongoose <br>
 
 - **협업** : Git & Git lab / Figma / Postman / Gather / Notion <br>
 
