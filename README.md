@@ -1,5 +1,5 @@
 
-# 🏠 POP,SPOT <br>팝업스토어 정보, 웨이팅, 사전예약을 통합으로 이용하는 서비스
+# 🏠 POP,SPOT <br>(팝업스토어 정보, 웨이팅, 사전예약을 통합으로 이용하는 서비스)
 
 <img src="https://blog.kakaocdn.net/dn/7qhOr/btsIbpoR2RP/XKsBQWmqm1h9TwXTAK3Fm1/img.gif" width="600">
 
