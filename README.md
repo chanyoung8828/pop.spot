@@ -63,5 +63,10 @@
 <img src="https://blog.kakaocdn.net/dn/RdoD6/btsH9tsBE4B/jCqQaxtm0kzekDGpdDcUtK/img.png" width="400"> <img src="https://blog.kakaocdn.net/dn/oHusH/btsH97o3bGX/7TS9ZdVwGlbrNBbTMnbTik/img.png" width="400">
 
 ### 3. 반응형
+- @media 미디어 쿼리를 사용하여 화면 너비에 따라 다른 스타일을 적용합니다.
+- flex-direction: column;을 사용하여 작은 화면에서 세로 방향으로 요소를 배치하도록 레이아웃을 조정하였습니다.
+- 버튼 등의 UI 요소는 다양한 미디어 쿼리에서 스타일이 달라질 수 있습니다.
+- 아이콘을 통한 토글 기능으로 화면 크기에 따라 사이드바가 자동으로 조정됩니다. 데스크탑 환경에서는 항상 표시되며, 모바일 환경에서는 아이콘을 클릭하면 나타납니다.
 
-
+  
+<img src="https://blog.kakaocdn.net/dn/C6MJx/btsIaTxl7T3/xzzQmobv54t3qxFcPPNMHk/img.gif" width="400"> <img src="https://blog.kakaocdn.net/dn/ckctoh/btsIbpbsMKB/CVr2q4FjHc4JIgB5OX7GT1/img.gif" height="209" width="160">
